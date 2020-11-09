@@ -21,3 +21,7 @@ USER ubuntu
 WORKDIR /home/ubuntu/
 RUN chmod a+rwx /home/ubuntu/
 #RUN echo `pwd`
+
+USER root
+RUN apt-get -y install vim
+
