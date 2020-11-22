@@ -24,4 +24,5 @@ RUN chmod a+rwx /home/ubuntu/
 
 USER root
 RUN apt-get -y install vim
+RUN apt-get -y install git
 
