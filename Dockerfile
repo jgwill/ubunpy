@@ -1,10 +1,13 @@
 FROM jgwill/ubuntu
 
+RUN apt update
 RUN apt-get update && apt-get upgrade -y
 
 RUN apt-get install -y python
 # && ln -sf /usr/bin/python /usr/bin/python
 RUN DEBIAN_FRONTEND=noninteractive
+RUN apt install pip -y
+
 #RUN apt-get install -y curl
 #RUN apt-get install -y emacs
 
