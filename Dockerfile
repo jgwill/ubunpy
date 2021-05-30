@@ -3,10 +3,25 @@ FROM jgwill/ubuntu
 RUN apt update
 RUN apt-get update && apt-get upgrade -y
 
-RUN apt-get install -y python
-# && ln -sf /usr/bin/python /usr/bin/python
+RUN apt-get remove python python3 -y
+RUN apt-get install -y python2
+
+RUN if [ -e /usr/bin/python2 ] && [ ! -e /usr/bin/python ] ; then ln -sf /usr/bin/python2 /usr/bin/python; fi
+
 RUN DEBIAN_FRONTEND=noninteractive
-RUN apt install pip -y
+
+
+RUN  apt install curl -y
+#RUN  add-apt-repository universe
+RUN  apt update
+RUN  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py # Fetch get-pip.py for python 2.7 
+RUN  python get-pip.py
+RUN pip --version
+
+
+#RUN apt install pip -y
+
+#RUN ln -sf /usr/bin/python2 /usr/bin/python
 
 #RUN apt-get install -y curl
 #RUN apt-get install -y emacs
