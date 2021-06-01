@@ -1,4 +1,4 @@
 #!/bin/bash
 . _env.sh
 
-docker run -it --rm  $containertag
+docker run -it --rm  $containertag $@

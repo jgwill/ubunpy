@@ -1,2 +1,3 @@
-containertag=jgwill/ubunpy:3.8.5
+containergroup=jgwill/ubunpy
+containertag=$containergroup:3.9
 
