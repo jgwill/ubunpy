@@ -18,10 +18,14 @@ RUN  ./configure --enable-optimizations
 RUN make -j 12
 RUN make altinstall
 
+RUN ln -sf /usr/local/bin/python3.9 /usr/bin/python
+RUN ln -sf /usr/local/bin/pip3.9 /usr/bin/pip
+RUN ln -sf /usr/local/bin/pip3.9 /usr/bin/pip3
 
 # RUN apt install software-properties-common -y
 # RUN add-apt-repository ppa:deadsnakes/ppa
 # RUN apt install python3.9  -y && ln -sf /usr/bin/python3.9 /usr/bin/python
+# RUN apt install python3.9  -y && 
 # # RUN apt remove python3-pip -y
 # #RUN apt install python3-pip -y
 # #Why does it reinstall it? Dont know !!
