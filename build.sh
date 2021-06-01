@@ -1,4 +1,4 @@
 #!/bin/bash
-
-docker build -t jgwill/ubunpy .
+. _env.sh
+docker build -t $containertag .
 

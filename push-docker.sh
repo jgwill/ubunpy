@@ -1,5 +1,6 @@
 #!/bin/bash
+. _env.sh
+docker push $containertag
 
-docker push jgwill/ubunpy:latest
 
 
