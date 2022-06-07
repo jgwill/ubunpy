@@ -1,4 +1,7 @@
 #!/bin/bash
 . _env.sh
-docker build -t $containertag .
+
+echo "INSTALL NOT WORKING"
+
+#docker build -t $containertag .
 
